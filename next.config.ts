@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  output: 'export', // CRITICAL: This allows GitHub to serve your site without a server
+  output: 'export',
+  // Replace 'Hero_assignment' with your exact repo name if different
+  basePath: isProd ? '/Hero_assignment' : '',
+  assetPrefix: isProd ? '/Hero_assignment/' : '',
   images: {
-    unoptimized: true, // Required because GitHub Pages doesn't support Next.js image optimization
+    unoptimized: true,
   },
-  // Optional: Only add these if your URL has a subfolder (e.g., username.github.io/my-repo/)
-  // basePath: '/your-repo-name',
 };
 
 export default nextConfig;
