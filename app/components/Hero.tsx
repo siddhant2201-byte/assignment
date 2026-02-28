@@ -112,7 +112,7 @@ export default function HeroFlash() {
           {/* THE MAIN IMAGE (Fades out) */}
           <div className="flash-bg absolute inset-0 z-20">
             <img 
-              src="/flash.jpg" 
+              src="/Hero_assignment/flash.jpg" 
               alt="The Flash" 
               className="h-full w-full object-cover" 
             />
